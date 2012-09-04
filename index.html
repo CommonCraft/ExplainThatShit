@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	
+
+	<!--
+	
+	#############################################################
+
+	Original code from:
+	What The Fuck Has Obama Done So Far? http://whatthefuckhasobamadonesofar.com
+	By Shavanna Miller @shavannam / Will Carlough @kuribo / Richard Boenigk @richardboenigk
+			
+	
+	#############################################################
+	
+	-->
+
+
+	<title>Explain Shit</title>
+	
+	<link href='css/style.css' rel='stylesheet' type='text/css'>	
+
+</head>
+<body>
+	
+<div id="wtf">
+  	<div id="so" class="fuck">What sort of sh*t has Common Craft explained?</div>
+  	<div id="frames">
+  	  <!-- frames here -->
+  	</div>
+</div>
+<div id="share" class="clearfix">
+		<div class="wrap">
+		<div id="links">
+			<a href="http://www.artofexplanation.com">Check out the Art of Explanation book </a>
+			<!-- | <a href="" id="linkToThis">link to this</a> -->
+		</div>
+	</div>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="mustache.js"></script>
+<script src="modernizer.js"></script>
+
+
+<script type="text/html" id="frame_template">
+  <div class="frame future">
+    <div class="text">{{text}}</div>
+    <div class="footnote"><a href="{{footnote}}">{{footnote}}</a></div>
+    <div class="bfd">
+  		<a href="javascript:void(0);" class="quip">{{quip}}</a>
+  	</div>
+  </div>
+</script>
+
+<script type="text/javascript">
+  
+var text = [];
+  text[1] = "Explained RSS (and RSS readers) in plain English";
+  text[2] = "Explained the technology behind how BitTorrent works";
+
+var footnotes = [];
+  footnotes[1] = "http://www.commoncraft.com/video/rss";
+  footnotes[2] = "http://www.commoncraft.com/video/bittorrent";
+
+var quips = [];
+  quips[0] = "Who cares? What else?";
+  quips[1] = "But what have they explained to me lately?";
+
+</script>
+
+
+<script type="text/javascript">
+
+$(function(){
+  var cursor = 1 + Math.floor((text.length - 1)*Math.random());
+  var $frames = $('#frames');
+  var $current, $old;
+  var frame_template = $('#frame_template').html();
+  
+  function next_frame(){
+    $old = $($current);
+    
+    // set up next frame
+    $current = $(Mustache.render(frame_template, {
+      text: text[cursor],
+      footnote: footnotes[cursor],
+      quip: quips[Math.floor(Math.random()*quips.length)]
+    })).appendTo($frames);
+    
+    $old.addClass('past');
+		setTimeout(function(){
+			$current.removeClass('future');				
+			setTimeout(function(){
+			  $old.remove();
+			}, 600);
+		}, 200);
+
+    cursor = (cursor >= text.length -1) ? 1 : cursor + 1;
+  }
+  
+  $('#frames').delegate('a.quip', 'click', function(){
+    next_frame();
+  });
+
+  next_frame();
+});
+</script>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
