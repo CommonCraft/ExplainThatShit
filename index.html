@@ -43,7 +43,7 @@
   	  <!-- frames here -->
   	  
   	<br/>
-  	<div id="share_this">Share This Shit! &nbsp;<a href="http://twitter.com/explainthatidea" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"></a> <div class="fb-like" data-href="http://facebook.com/artofexplanation" data-send="true" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div><!--<a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"></a> <!-- <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a> --></div>
+  	<div id="share_this">Share This Shit! &nbsp;<a href="http://twitter.com/explainthatidea" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"></a> <div class="fb-like" data-href="http://facebook.com/artofexplanation" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div><!--<a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"></a> <!-- <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a> --></div>
   	</div>
   	
 </div>
@@ -93,7 +93,7 @@ $("#twitter_link").on('click',function(){
 $("#facebook_link").on('click',function(){
 	newlink = 'http://www.facebook.com/sharer.php?u=http://www.explainthatshit.com&t='
 	newlink += encodeURIComponent($('.text').text().trim())
-	newlink += '\" - via: '
+	newlink += '\" via: '
 	$(this).attr('href', newlink)
 });
 </script>	
