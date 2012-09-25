@@ -378,9 +378,22 @@ body {
 }
 
 #share_this {
-	width: 850px;
+	margin: 0 auto;
+	width:300px;
 	color: #000;
 	margin-top: 320px;
+	margin-left: 260px;
+}
+
+div.fb-like  {
+	display: inline-block;
+	width: 100px;
+	height: 20px;
+	vertical-align: 4px;
+}
+
+#frames div.frame div.text img {
+	margin-left: 15px;
 }
 
 

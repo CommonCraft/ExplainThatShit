@@ -21,6 +21,7 @@
 	<title>Explain That Shit</title>
 	
 	<link href='./css/style.css' rel='stylesheet' type='text/css'>	
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="ets_favicon.ico" />
 
 </head>
 <body>
@@ -72,7 +73,7 @@
 
 <script type="text/html" id="frame_template">
   <div class="frame future">
-    <div class="text"><img src="images/guy-with-bulb.png" alt="Guy With Bulb">{{text}} 
+    <div class="text"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb">{{text}} 
     </div>
     <div class="footnote"><a href="{{footnote}}">{{footnote}}</a></div>
     <div class="bfd">
@@ -178,6 +179,53 @@ var quips = [];
   quips[6] = "More! More! More!";
   quips[7] = "Thank You, I'll Have Another.";
 
+var illustrations = [];
+    //illustrations[0] = "backwardwoman1.png";
+    illustrations[0] = "blueglobe.png";
+    illustrations[1] = "bosco-head-color.png";
+    illustrations[3] = "bubble-color.png";
+    illustrations[2] = "building-flag-color.png";
+    illustrations[3] = "cc-lightbulb-colored.png";
+    //illustrations[6] = "celebration.png";
+    //illustrations[7] = "clooud-color.png";
+    illustrations[4] = "color-hand-out-2-copy.png";
+    illustrations[5] = "color-hand-out-4.png";
+    illustrations[6] = "Color-Paperworks-Images-for-NewCC-pencil.png";
+    illustrations[7] = "Color-Paperworks-Images-for-NewCC-suggestion.png";
+    //illustrations[0] = "color-speech-bubble.png";
+    illustrations[8] = "computer-color.png";
+    illustrations[9] = "computeruser3.png";
+    illustrations[10] = "computeruser6.png";
+    illustrations[11] = "doctor-waist-plan.png";
+    illustrations[12] = "famale-present-waist-color.png";
+    illustrations[13] = "female-hand-up2.png";
+    illustrations[14] = "female-looking-distance.png";
+    illustrations[15] = "female-yellow-hand-out.png";
+    illustrations[16] = "fire.png";
+    illustrations[17] = "group.png";
+    //illustrations[0] = "hand-magnify-color.png";
+    illustrations[18] = "jump-person-color.png";
+    //illustrations[0] = "jumper-color-stand.png";
+    illustrations[19] = "Lee-point-to-book-color.png";
+    //illustrations[0] = "lookerup.png";
+    illustrations[20] = "look-inside-color-looking.png";
+    illustrations[21] = "meeting-table-color.png";
+    illustrations[22] = "megaphone-man-waist-color.png";
+    illustrations[23] = "person-color-hand-out.png";
+    illustrations[24] = "person-color-hand-up.png";
+    //illustrations[0] = "person-no-color.png";
+    illustrations[25] = "person-teacher.png";
+    //illustrations[0] = "person-tie-Man.png";
+    illustrations[26] = "person-waist-color-thumb.png";
+    //illustrations[0] = "person-walk-computer-color.png";
+    illustrations[27] = "present-man-color.png";
+    illustrations[28] = "question-bubble-color.png";
+    illustrations[29] = "satellite-dish-color.png";
+    illustrations[30] = "scroll-color.png";
+    //illustrations[0] = "talk-bubble-color-copy.png";
+    //illustrations[0] = "tree-color.png";
+    illustrations[31] = "waist17.png";
+
 
 </script>
 
@@ -197,6 +245,7 @@ $(function(){
     $current = $(Mustache.render(frame_template, {
       text: text[cursor],
       footnote: footnotes[cursor],
+      illustrations: illustrations[Math.floor(Math.random()*illustrations.length)],
       quip: quips[Math.floor(Math.random()*quips.length)]
     })).appendTo($frames);
     
