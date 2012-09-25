@@ -1,3 +1,40 @@
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2012 Fontspring
+ *
+ *
+ *
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Mostardesign
+ * License URL: http://www.fontspring.com/fflicense/mostardesign
+ *
+ *
+ */
+
+@font-face {
+    font-family: 'SofiaProLightRegular';
+    src: url('/css/SofiaProLight-webfont.eot');
+    src: url('/css/SofiaProLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('SofiaProLight-webfont.woff') format('woff'),
+         url('SofiaProLight-webfont.ttf') format('truetype'),
+         url('SofiaProLight-webfont.svg#SofiaProLightRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 /* line 5, ../scss/style.scss */
 a:link, a:visited, a:active, a:hover {
   color: #82ADFE;
@@ -20,30 +57,32 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: #2d58c4;
-  background: blue;
+  background-color: #f4f4f4;
   color: #fff;
-  font-family: 'Neuton', georgia, serif;
+  font-family: 'SofiaProLightRegular' !important;
+
 }
 
 /* line 28, ../scss/style.scss */
 #share {
-  background: #122B60;
+  background: #121c44;
   color: rgba(255, 255, 255, 0.5);
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 75px;
+  height: 80px;
   text-align: right;
 }
+
+
 /* line 37, ../scss/style.scss */
 #share .wrap {
   padding: 12px 24px 0;
 }
 /* line 40, ../scss/style.scss */
 #share a {
-  color: #fff!important;
+  color: #fff !important;
 }
 
 /* line 46, ../scss/style.scss */
@@ -56,16 +95,15 @@ body {
 
 /* line 54, ../scss/style.scss */
 #so {
-  font-variant: small-caps;
-  color: #FFDE84;
-  font-size: 20px;
-  text-shadow: 0 0 3px #2D58C4;
-#  text-indent: -9999px;
-  width: 361px;
+  color: #000;
+  font-size: 70px;
+  width: 700px;
   height: 58px;
-  margin: 30px auto 30px;
+  margin: 30px auto 60px;
   background-repeat: no-repeat;
+  text-transform: uppercase;
 }
+
 /* line 64, ../scss/style.scss */
 #so.heck {
   background: url("/heck.png");
@@ -78,7 +116,9 @@ body {
 /* line 73, ../scss/style.scss */
 #frames {
   position: relative;
-  width: 100%;
+  width: 900px;
+  margin: 0 auto;
+  
 }
 /* line 268, ../scss/lib/_mixins.scss */
 #frames .frame {
@@ -122,7 +162,7 @@ body {
   -webkit-transition: -webkit-transform .3s ease-in-out, opacity .3s ease-in-out;
   -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s ease-in-out;
   -moz-transition: -moz-transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s ease-in-out;
-  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s ease-in-out;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55), opacity 0.5s ease-in-out;*/
 }
 /* line 295, ../scss/lib/_mixins.scss */
 .csstransforms3d #frames .frame.future {
@@ -148,11 +188,16 @@ body {
 }
 /* line 77, ../scss/style.scss */
 #frames .frame {
-  position: absolute;
+  display: block;
   top: 0;
-  left: 50%;
-  width: 700px;
-  margin-left: -350px;
+  margin: 0 auto;
+  width: 850px;
+}
+
+
+#frames div.frame div.text img {
+	float: right;
+	margin-top: -20px ;
 }
 
 /* line 87, ../scss/style.scss */
@@ -165,82 +210,42 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   cursor: pointer;
-  font-family: 'ProximaNovaSemibold';
   position: relative;
   padding: .5em .66em;
   margin-bottom: 12px;
   text-align: center;
   display: inline-block;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding;
-  -o-background-clip: padding-box;
-  -ms-background-clip: padding-box;
-  -khtml-background-clip: padding-box;
-  background-clip: padding-box;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  -ms-border-radius: 4px;
-  -khtml-border-radius: 4px;
-  border-radius: 4px;
-  -moz-transition-property: all;
-  -webkit-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -moz-transition-duration: 0.2s;
-  -webkit-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
-  text-decoration: none;
-  white-space: normal;
-  -moz-box-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0 0 inset;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0 0 inset;
-  -o-box-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0 0 inset;
-  box-shadow: rgba(255, 255, 255, 0.4) 1px 1px 0 0 inset;
   color: #fff;
   border: 1px solid #666;
   border-color: rgba(20, 20, 20, 0.15);
-  background: #c0d4fd;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c0d4fd), color-stop(100%, #98b9fc));
-  background: -webkit-linear-gradient(top, #c0d4fd, #98b9fc);
-  background: -moz-linear-gradient(top, #c0d4fd, #98b9fc);
-  background: -o-linear-gradient(top, #c0d4fd, #98b9fc);
-  background: -ms-linear-gradient(top, #c0d4fd, #98b9fc);
-  background: linear-gradient(top, #c0d4fd, #98b9fc);
-  font-size: 22px;
-  color: #2a62c1 !important;
+  background: #dd7b31;  
+  font-size: 24px;
+  color: #fff !important;
+  width: 377px;
 }
+
 /* line 18, ../scss/lib/_mixins.scss */
 .bfd a:hover {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d9e5fe), color-stop(100%, #b1cafd));
-  background: -webkit-linear-gradient(top, #d9e5fe, #b1cafd);
-  background: -moz-linear-gradient(top, #d9e5fe, #b1cafd);
-  background: -o-linear-gradient(top, #d9e5fe, #b1cafd);
-  background: -ms-linear-gradient(top, #d9e5fe, #b1cafd);
-  background: linear-gradient(top, #d9e5fe, #b1cafd);
-  text-decoration: none;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #dd7b31), color-stop(100%, #bd5300));
+    text-decoration: none;
 }
+
 /* line 23, ../scss/lib/_mixins.scss */
 .bfd a:active, .bfd a.stayActive {
   background: #98b9fc;
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #98b9fc), color-stop(100%, #80a8fb));
-  background: -webkit-linear-gradient(top, #98b9fc, #80a8fb);
-  background: -moz-linear-gradient(top, #98b9fc, #80a8fb);
-  background: -o-linear-gradient(top, #98b9fc, #80a8fb);
-  background: -ms-linear-gradient(top, #98b9fc, #80a8fb);
-  background: linear-gradient(top, #98b9fc, #80a8fb);
-  -moz-box-shadow: rgba(0, 0, 0, 0.25) 1px 1px 1px 0 inset;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 1px 1px 1px 0 inset;
-  -o-box-shadow: rgba(0, 0, 0, 0.25) 1px 1px 1px 0 inset;
-  box-shadow: rgba(0, 0, 0, 0.25) 1px 1px 1px 0 inset;
-}
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #bd5300), color-stop(100%, #dd7b31));
+    text-decoration: none;}
 
 /* line 96, ../scss/style.scss */
 .text {
+   font-family: 'SofiaProLightRegular';
   display: block;
   line-height: 48px;
-  font-size: 42px;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.25);
+  padding: 40px 20px 10px 20px;
+  font-size: 24px;
+  color: #000;
+  height: 190px;
+  background-color: #fff; /* layer fill content */-moz-box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */-webkit-box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */
 }
 
 /* line 102, ../scss/style.scss */
@@ -263,7 +268,41 @@ body {
 #links {
   display: block;
   float: right;
-  text-align: right;
+  text-align: center;
+  width: 270px;
+  color: #fff;
+  margin-right: 20px;
+  margin-top: -50px;
+}
+
+#links span {
+	display: block;
+	margin-left: 30px;
+	margin-top: 60px;
+	padding-bottom: 5px;
+	width: 250px;
+}
+
+#links a {
+	display: block;
+	width: 130px;
+	float: right;
+	background-color: #3b5482;
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 1px solid #fff;
+}
+
+#links img {
+	float: left;
+}
+
+#copyright_box {
+	display: block;
+	float: left;
+	text-align: left;
+	margin-top: 25px;
 }
 
 /* line 121, ../scss/style.scss */
@@ -331,3 +370,17 @@ body {
     display: none;
   }
 }
+
+
+.fuck_subtitle {
+	font-size: 25px;
+	text-transform: lowercase;
+}
+
+#share_this {
+	width: 850px;
+	color: #000;
+	margin-top: 320px;
+}
+
+
