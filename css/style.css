@@ -389,6 +389,7 @@ div.fb-like  {
 	display: inline-block;
 	height: 20px;
 	float: right;
+	margin-top: 4px;
 	margin-left: -60px;
 }
 
