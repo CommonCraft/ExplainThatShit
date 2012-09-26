@@ -96,8 +96,8 @@ body {
 /* line 54, ../scss/style.scss */
 #so {
   color: #000;
-  font-size: 70px;
-  width: 700px;
+  font-size: 50px;
+  width: 900px;
   height: 58px;
   margin: 30px auto 60px;
   background-repeat: no-repeat;
@@ -373,13 +373,13 @@ body {
 
 
 .fuck_subtitle {
-	font-size: 25px;
-	text-transform: lowercase;
+	/*font-size: 25px;
+	text-transform: lowercase;*/
 }
 
 #share_this {
 	margin: 0 auto;
-	width:300px;
+	width: 300px;
 	color: #000;
 	margin-top: 320px;
 	margin-left: 260px;
@@ -387,9 +387,9 @@ body {
 
 div.fb-like  {
 	display: inline-block;
-	width: 100px;
 	height: 20px;
-	vertical-align: 4px;
+	float: right;
+	margin-top: -25px;
 }
 
 #frames div.frame div.text img {
