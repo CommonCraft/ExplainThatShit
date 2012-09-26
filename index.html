@@ -5,6 +5,7 @@
 	
 
 	<!--
+	note: edited 10:59
 	
 	#############################################################
 
@@ -86,7 +87,7 @@
 $("#twitter_link").on('click',function(){
 	newlink = 'http://twitter.com/intent/tweet?url=http://bit.ly/ccets&text=\"'
 	newlink += encodeURIComponent($('.text').text().trim())
-	newlink += '\" - via: '
+	newlink += '\" via: '
 	$(this).attr('href', newlink)
 });
 
