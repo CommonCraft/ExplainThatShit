@@ -20,10 +20,10 @@
 
 
 	<title>Explain That Shit</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<link href='./css/style.css' rel='stylesheet' type='text/css'>	
 	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="ets_favicon.ico" />
-
+  
 </head>
 <body>
 <div id="fb-root"></div>
@@ -34,53 +34,72 @@
   js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=126428630780360";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>	
-<div id="wtf">
-  	<div id="so" class="fuck">
-  	<strong class="fuck_subtitle">Still Don't Understand?</strong><!--<br/>
-  	EXPLAIN THAT SHIT -->      	
-  	</div>
-  	<br/>
-  	<div id="frames">
-  	  <!-- frames here -->
-  	  
-  	<br/>
-  	<div id="share_this">Share This Shit! &nbsp;<a href="http://twitter.com/explainthatidea" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"></a> <div class="fb-like" data-href="http://facebook.com/artofexplanation" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div><!--<a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"></a> <!-- <a href="#"><img src="images/g.png" alt="G"></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"></a> --></div>
-  	</div>
-  	
+<div class="wrapper">
+  
+<div class="shell">
+  
+    <div id="wtf">
+    	<div id="so" class="fuck">
+    	<strong class="fuck_subtitle">Still Don't Understand?</strong><!--<br/>
+    	EXPLAIN THAT SHIT -->      	
+    	</div>
+    	<br/>
+    	<div id="frames">
+        <span class="left-corner"></span>
+        <span class="right-corner"></span>
+    	  <!-- frames here -->
+    	  
+    	<br/>
+
+    	</div>
+     
+    	
+  </div>
+  </div>
+  <div id="share_this" class="footer">Share This Shit! &nbsp;
+   <a href="http://twitter.com/explainthatidea" target="_blank" id="twitter_link"><img src="images/twitter.png" alt="Twitter"/></a> 
+   <div class="fb-like" data-href="http://facebook.com/artofexplanation" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-font="lucida grande"></div>
+   <!--<a href="#" id="facebook_link"><img src="images/facebook.png" alt="Facebook"/></a> <!-- <a href="#"><img src="images/g.png" alt="G"/></a> <a href="#"><img src="images/amazon.png" alt="Get it on Amazon"/></a> -->
+ </div>
+  <div class="push">
+    
+  </div>
 </div>
 
-
+<div class="footer">
+  
+  
 <div id="share" class="clearfix">
-
 	<div id="links">
-			<a href="http://artofexplanation.com/book/art-of-explanation-buy"><img src="images/book-cover.png" alt="The Art of Explanation"></a>
+			<a href="http://artofexplanation.com/book/art-of-explanation-buy"><img src="images/book-cover.png" alt="The Art of Explanation"/></a>
 			<span>Want more?</span>
 			<a href="http://artofexplanation.com/book/art-of-explanation-buy" id="buy_more">Buy the book</a>
+      <span class="right-copy">&copy; 2012 Common Craft | <a href="#">NSFW Version</a></span>
 		</div>
 		<div class="wrap">
 		<div id="copyright_box">
 		&copy; 2012 <a href="http://www.commoncraft.com/">Common Craft</a> | <a href="http://bit.ly/cceti">Work-Safe Version</a> &nbsp; </div>
-		
-	
-		
 	</div>
 </div>
-
+</div>
 
 <script src="jquery-1.8.1.min.js"></script>
 <script src="mustache.js"></script>
 <script src="modernizr.js"></script>
-
+<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="functions.js"></script>
 
 <script type="text/html" id="frame_template">
   <div class="frame future">
-    <div class="text"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb">{{text}} 
+    <div class="text"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb"/>{{text}} 
     </div>
     <div class="footnote"><a href="{{footnote}}">{{footnote}}</a></div>
     <div class="bfd">
   		<a href="javascript:void(0);" class="quip">{{quip}}</a>
   	</div>
+
   </div>
+   
 </script>
 
 <script>
@@ -97,6 +116,9 @@ $("#facebook_link").on('click',function(){
 	newlink += '\" via: '
 	$(this).attr('href', newlink)
 });
+
+
+  
 </script>	
 
 <script type="text/javascript">
@@ -145,7 +167,7 @@ var text = [];
   text[41] = "Like a movie script, a written explanation can be a starting point for some serious multi-media shit.";
   text[42] = "Sometimes the big thing keeping shit from being adopted isn't features, value or design, but explanation.";
   text[43] = "Have fun in explanations. Take risks, use humor and make people smile. Shit, use some profanity when it's cool.";
-  text[44] = "Slow the hell down. Take deep breaths. Add emphasis by saying important...shit...slowly.";
+  text[44] = "Slow the hell down. Take deep breaths. Add emphasis by saying important ...shit...slowly.";
   text[45] = "Visuals and media can make your explanation shine. Experiment with ways to blow peoples' minds.";
   text[46] = "In presenting an explanation, simple drawings can do the trick. You don't have to be Da Vinci or Bob Ross.";
   text[47] = "You can become a new kind of wizard in your organization - an explanation wizard, a specialist.";
@@ -265,6 +287,7 @@ $(function(){
   
   $('#frames').delegate('a.quip', 'click', function(){
     next_frame();
+    set_frame_height();
   });
 
   next_frame();
