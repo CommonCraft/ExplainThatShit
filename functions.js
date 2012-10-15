@@ -8,16 +8,22 @@ $(window).load(function() {
          $('.bfd a.quip').trigger('click');
          var window_width = $(window).width();
          if ( window_width <= 768 ) {
-     		$('#frames .left-corner, #frames .right-corner').fadeOut(function() {
-     			$(this).delay(300).fadeIn();
-     		})
-     	 }else {
-     	 	$('#frames .left-corner, #frames .right-corner').fadeOut();
-     	 };
+         		$('#frames .left-corner, #frames .right-corner').fadeOut(function() {
+         			$(this).delay(300).fadeIn();
+         		})
+     	    } else {
+     	 	    $('#frames .left-corner, #frames .right-corner').fadeOut();
+     	    };
        }, 
        swipeRight:function(event, direction, distance, duration, fingerCount) {
            $('.bfd a.quip').trigger('click');
+       },
+       click:function(event, target) {
+            if ( $(target).attr("class") == 'quip' ) {
+                $('.bfd a.quip').trigger('click');
+            };
        }
+
     });
 
 
