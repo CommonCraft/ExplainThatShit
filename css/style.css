@@ -777,9 +777,7 @@ rgin is the negative value of the footer's height */
 and (orientation : portrait) {
 	
 div#share_this.footer {
-	margin-bottom: 125px !important;
-	padding-left: 0;
-}
+	margin-bottom: 150px !important;}
 
 
 }
