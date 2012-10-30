@@ -553,6 +553,11 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17
 	position: relative;
 }
 
+.fuck_subtitle_smaller {
+	font-size: 30px;
+	display: none;
+}
+
 @media screen and (max-width: 900px) {
 
 #frames .left-corner, #frames .right-corner {
@@ -625,6 +630,10 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17
 	position: relative;
 	margin-top: 11px;
 }
+
+
+   .fuck_subtitle_smaller { display: block; }
+   .fuck_subtitle { display: none; }
 
 }
 
