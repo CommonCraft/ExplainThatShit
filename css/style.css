@@ -792,3 +792,7 @@ div#share_this.footer {
 
 
 }
+
+.ptm {
+	display: none !important;
+}
