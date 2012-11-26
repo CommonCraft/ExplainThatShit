@@ -793,6 +793,6 @@ div#share_this.footer {
 
 }
 
-.ptm {
-	display: none !important;
+.fb_edge_comment_widget.fb_iframe_widget > span {
+	overflow: auto !important;
 }
