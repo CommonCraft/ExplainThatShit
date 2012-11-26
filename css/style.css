@@ -793,6 +793,10 @@ div#share_this.footer {
 
 }
 
-.fb_edge_comment_widget.fb_iframe_widget > span {
-	overflow: auto !important;
+
+@media screen and (max-height: 583px) {
+	
+.footer, .push { height: 110px !important; }
+#share { height: 110px !important;}
+
 }
