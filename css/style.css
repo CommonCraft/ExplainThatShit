@@ -794,7 +794,7 @@ div#share_this.footer {
 }
 
 
-@media screen and (max-height: 583px) {
+@media screen and (max-height: 720px) {
 	
 .footer, .push { height: 110px !important; }
 #share { height: 110px !important;}
