@@ -92,7 +92,7 @@
 
 <script type="text/html" id="frame_template">
   <div class="frame future">
-    <div class="text"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb"/>{{text}}
+    <div class="text" id="{{anchor}}"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb"/>{{text}}
     </div>
     <div class="footnote"><a href="{{footnote}}">{{footnote}}</a></div>
     <div class="bfd">
@@ -105,14 +105,18 @@
 
 <script>
 $("#twitter_link").on('click',function(){
-	newlink = 'http://twitter.com/intent/tweet?url=http://bit.ly/ccets&text=\"'
+	newlink = 'http://twitter.com/intent/tweet?url=http://bit.ly/ccets%23'
+	newlink += $('.text').attr('id')
+	newlink += '&text=\"'
 	newlink += encodeURIComponent($('.text').text().trim())
 	newlink += '\" via: '
 	$(this).attr('href', newlink)
 });
 
 $("#facebook_link").on('click',function(){
-	newlink = 'http://www.facebook.com/sharer.php?u=http://www.explainthatshit.com&t='
+	newlink = 'http://www.facebook.com/sharer.php?u=http://www.explainthatshit.com%23'
+	newlink += $('.text').attr('id')
+	newlink += '&t='
 	newlink += encodeURIComponent($('.text').text().trim())
 	newlink += '\" via: '
 	$(this).attr('href', newlink)
@@ -125,62 +129,62 @@ $("#facebook_link").on('click',function(){
 <script type="text/javascript">
 
 var text = [];
-  text[1] = "Taking the time to learn new shit is expensive. Your explanation should make that shit cheap.";
-  text[2] = "Your explanation should make people feel confident. Without confidence, no one will give a shit.";
-  text[3] = "Build context - it's the world where your shit lives. Start with the forest and then talk about the trees.";
-  text[4] = "Make connections to shit the audience already understands. Show them how X is like Y with a few differences.";
-  text[5] = "Stop trying to look like a smartypants and start helping people feel like they know some shit.";
-  text[6] = "Facts are not enough. Show how a person experiences and learns about that shit to make it an explanation. ";
-  text[7] = "Empathize and shit. Imagine what it's like to hear your explanation in another person's shoes.";
-  text[8] = "Don't assume people know what you know. They don't know that shit.  Give them a way to catch up quickly.";
-  text[9] = "Impress experts not with your depth of knowledge, but how broadly you can apply that shit.";
-  text[10] = "Start with some shit that helps set the stage for your ideas. Come to agreement early and often.";
-  text[11] = "If your intent is to explain some shit, make your intentions known. Show 'em you're going to solve a problem.";
-  text[12] = "The best thing you can do is make people care about shit you say. Explanations can make people care.";
-  text[13] = "Think of your explanation as a package of ideas designed that's designed to blow people's minds with clarity.";
-  text[14] = "Taking the time to learn new shit is expensive. Your explanation should make that shit cheap.";
-  text[15] = "Keep that shit short.";
-  text[16] = "Consider every word you use in an explanation. A single word can mess that shit up.";
-  text[17] = "Your explanation should make people feel confident. Without confidence, no one will give a shit.";
-  text[18] = "Zoom out. Look at that shit from the clouds. Then zoom in slowly on your ideas, like a skydiver.";
-  text[19] = "Being a smartypants makes it hard to empathize. This is The Curse of Knowledge at work. It's serious business.";
-  text[20] = "Stories are the shit. Adding a person's experience to your explanation makes it more like a story.";
-  text[21] = "Plan your shit ahead of time. Consider your audience and what will make them feel like the man (or woman).";
-  text[22] = "When explaining some shit, remember to put the 'why' before the 'how', like the salt before the tequila.";
-  text[23] = "Explanation is a skill. That shit can be learned & improved. The 1st step is to realize that this is possible.";
-  text[24] = "Fact telling sucks. Storytelling is what makes people remember that shit.  ";
-  text[25] = "Explanations make shit understandable. But if you can inspire and motivate too - that's the bomb.";
-  text[26] = "Explanations clarify and describe facts. It's all about helping people see that shit from a new perspective";
-  text[27] = "Explanation is an art, we all do that shit differently and that makes it creative and awesome.";
-  text[28] = "Get this. Studies have shown that explaining that shit can benefit the explainer more than the explainee.";
-  text[29] = "When someone asks 'What is X?' Answer as if they asked 'Why should I give a shit about X?'";
-  text[30] = "Explanations affect confidence. Good ones build it, poor ones take that shit away.";
-  text[31] = "The best explanations start as a written document, like a script for a movie or rap lyrics.";
-  text[32] = "Context creates a foundation for other ideas. Without it, ideas are homeless & hungry. Feed them context.";
-  text[33] = "In introducing some new shit, show how the idea takes away pain. Make them say 'I know that feeling!'";
-  text[34] = "Check it: Facts give stories substance. Stories give facts meaning. Explanations need both.";
-  text[35] = "Analogy is some powerful shit. Remember: analogies explain a connection, metaphors highlight it.";
-  text[36] = "Be willing to trade understanding for technical accuracy in the beginning. But get a good deal.";
-  text[37] = "Constrain yourself. Design your explanation within the limits of how it will be used. But lose the handcuffs.";
-  text[38] = "Focus on 2-3 big ideas.  No one is going to remember half the shit you say anyway. ";
-  text[39] = "Start building explanation skills by learning to explain your job and why that shit matters.";
-  text[40] = "Explanations should answer 'why?' - as in, why does this shit make sense? Or why am I so good looking?";
-  text[41] = "Like a movie script, a written explanation can be a starting point for some serious multi-media shit.";
-  text[42] = "Sometimes the big thing keeping shit from being adopted isn't features, value or design, but explanation.";
-  text[43] = "Have fun in explanations. Take risks, use humor and make people smile. Shit, use some profanity when it's cool.";
-  text[44] = "Slow the hell down. Take deep breaths. Add emphasis by saying important ...shit...slowly.";
-  text[45] = "Visuals and media can make your explanation shine. Experiment with ways to blow peoples' minds.";
-  text[46] = "In presenting an explanation, simple drawings can do the trick. You don't have to be Da Vinci or Bob Ross.";
-  text[47] = "You can become a new kind of wizard in your organization - an explanation wizard, a specialist.";
-  text[48] = "You take explanation for granted. It's time to take a step back and see what kind of shit is really possible.";
-  text[49] = "You can become an ambassador for your profession by finding new ways to explain that shit & make people care.";
-  text[50] = "A prerequisite for explanation is understanding the shit you're saying. Learn the facts, then get creative. ";
-  text[51] = "Einstein once said 'If you can’t explain it simply, you don’t understand it well enough.' That's good shit.";
-  text[51] = "Explanations are like driving directions. Imagine what it's like to approach some shit for the FIRST time.";
-  text[52] = "In the future, companies will compete on who can explain their shit the best. You can help."
-  text[53] = "Don't let your best explanations disappear into the ether. Record that shit and it may live forever."
-  text[54] = "You work inside a bubble. Remember that your explanation may have to make sense to people outside of that shit.";
-  text[55] = "Explanations aren't enough. If you want to really shine, find ways to make that shit remarkable.";
+  text[1]  = "cheap|Taking the time to learn new shit is expensive. Your explanation should make that shit cheap.";
+  text[2]  = "confident|Your explanation should make people feel confident. Without confidence, no one will give a shit.";
+  text[3]  = "context|Build context - it's the world where your shit lives. Start with the forest and then talk about the trees.";
+  text[4]  = "connections|Make connections to shit the audience already understands. Show them how X is like Y with a few differences.";
+  text[5]  = "smartypants|Stop trying to look like a smartypants and start helping people feel like they know some shit.";
+  text[6]  = "facts|Facts are not enough. Show how a person experiences and learns about that shit to make it an explanation. ";
+  text[7]  = "empathize|Empathize and shit. Imagine what it's like to hear your explanation in another person's shoes.";
+  text[8]  = "assume|Don't assume people know what you know. They don't know that shit.  Give them a way to catch up quickly.";
+  text[9]  = "impress|Impress experts not with your depth of knowledge, but how broadly you can apply that shit.";
+  text[10] = "start|Start with some shit that helps set the stage for your ideas. Come to agreement early and often.";
+  text[11] = "intent|If your intent is to explain some shit, make your intentions known. Show 'em you're going to solve a problem.";
+  text[12] = "care|The best thing you can do is make people care about shit you say. Explanations can make people care.";
+  text[13] = "package|Think of your explanation as a package of ideas designed that's designed to blow people's minds with clarity.";
+  text[14] = "cheap|Taking the time to learn new shit is expensive. Your explanation should make that shit cheap.";
+  text[15] = "short|Keep that shit short.";
+  text[16] = "single|Consider every word you use in an explanation. A single word can mess that shit up.";
+  text[17] = "confident|Your explanation should make people feel confident. Without confidence, no one will give a shit.";
+  text[18] = "zoom|Zoom out. Look at that shit from the clouds. Then zoom in slowly on your ideas, like a skydiver.";
+  text[19] = "empathize|Being a smartypants makes it hard to empathize. This is The Curse of Knowledge at work. It's serious business.";
+  text[20] = "stories|Stories are the shit. Adding a person's experience to your explanation makes it more like a story.";
+  text[21] = "plan|Plan your shit ahead of time. Consider your audience and what will make them feel like the man (or woman).";
+  text[22] = "why|When explaining some shit, remember to put the 'why' before the 'how', like the salt before the tequila.";
+  text[23] = "skill|Explanation is a skill. That shit can be learned & improved. The 1st step is to realize that this is possible.";
+  text[24] = "telling|Fact telling sucks. Storytelling is what makes people remember that shit.  ";
+  text[25] = "motivate|Explanations make shit understandable. But if you can inspire and motivate too - that's the bomb.";
+  text[26] = "clarify|Explanations clarify and describe facts. It's all about helping people see that shit from a new perspective";
+  text[27] = "art|Explanation is an art, we all do that shit differently and that makes it creative and awesome.";
+  text[28] = "studies|Get this. Studies have shown that explaining that shit can benefit the explainer more than the explainee.";
+  text[29] = "answer|When someone asks 'What is X?' Answer as if they asked 'Why should I give a shit about X?'";
+  text[30] = "build|Explanations affect confidence. Good ones build it, poor ones take that shit away.";
+  text[31] = "start|The best explanations start as a written document, like a script for a movie or rap lyrics.";
+  text[32] = "foundation|Context creates a foundation for other ideas. Without it, ideas are homeless & hungry. Feed them context.";
+  text[33] = "idea|In introducing some new shit, show how the idea takes away pain. Make them say 'I know that feeling!'";
+  text[34] = "check|Check it: Facts give stories substance. Stories give facts meaning. Explanations need both.";
+  text[35] = "analogy|Analogy is some powerful shit. Remember: analogies explain a connection, metaphors highlight it.";
+  text[36] = "trade|Be willing to trade understanding for technical accuracy in the beginning. But get a good deal.";
+  text[37] = "constrain|Constrain yourself. Design your explanation within the limits of how it will be used. But lose the handcuffs.";
+  text[38] = "focus|Focus on 2-3 big ideas.  No one is going to remember half the shit you say anyway. ";
+  text[39] = "learning|Start building explanation skills by learning to explain your job and why that shit matters.";
+  text[40] = "good-looking|Explanations should answer 'why?' - as in, why does this shit make sense? Or why am I so good looking?";
+  text[41] = "movie|Like a movie script, a written explanation can be a starting point for some serious multi-media shit.";
+  text[42] = "big-thing|Sometimes the big thing keeping shit from being adopted isn't features, value or design, but explanation.";
+  text[43] = "fun|Have fun in explanations. Take risks, use humor and make people smile. Shit, use some profanity when it's cool.";
+  text[44] = "slow|Slow the hell down. Take deep breaths. Add emphasis by saying important ...shit...slowly.";
+  text[45] = "visuals|Visuals and media can make your explanation shine. Experiment with ways to blow peoples' minds.";
+  text[46] = "explanation|In presenting an explanation, simple drawings can do the trick. You don't have to be Da Vinci or Bob Ross.";
+  text[47] = "wizard|You can become a new kind of wizard in your organization - an explanation wizard, a specialist.";
+  text[48] = "step-back|You take explanation for granted. It's time to take a step back and see what kind of shit is really possible.";
+  text[49] = "ambassador|You can become an ambassador for your profession by finding new ways to explain that shit & make people care.";
+  text[50] = "prerequisite|A prerequisite for explanation is understanding the shit you're saying. Learn the facts, then get creative. ";
+  text[51] = "einstein|Einstein once said 'If you can’t explain it simply, you don’t understand it well enough.' That's good shit.";
+  text[51] = "directions|Explanations are like driving directions. Imagine what it's like to approach some shit for the FIRST time.";
+  text[52] = "future|In the future, companies will compete on who can explain their shit the best. You can help."
+  text[53] = "record|Don't let your best explanations disappear into the ether. Record that shit and it may live forever."
+  text[54] = "bubble|You work inside a bubble. Remember that your explanation may have to make sense to people outside of that shit.";
+  text[55] = "remarkable|Explanations aren't enough. If you want to really shine, find ways to make that shit remarkable.";
 
 
 var subtitles =[];
@@ -262,12 +266,29 @@ $(function(){
   var $current, $old;
   var frame_template = $('#frame_template').html();
 
-  function next_frame(){
+  function next_frame(hash){
+  	// if the URL contains a hash and that's passed to the function, look for that item. Otherwise, use random cursor
+  	if (hash != undefined) {
+  		for (var i = 1; i < text.length; i++) {
+			// on the first match of the hash, set the cursor and exit
+			if (text[i].substring(0,hash.length) == hash) {
+				cursor = i;
+				break;
+			}
+		}
+  	}
+  	// if nothing matches, the default cursor stays
+  	
     $old = $($current);
 
     // set up next frame
+    splittext = text[cursor].split('|'); // split up the text to grab the anchor
+    anchor    = splittext.shift();   // grab the first item
+    fixedtext = splittext.join('|') ;  // re-join the rest
+    
     $current = $(Mustache.render(frame_template, {
-      text: text[cursor],
+      anchor: anchor,
+      text: fixedtext,
       footnote: footnotes[cursor],
       illustrations: illustrations[Math.floor(Math.random()*illustrations.length)],
       quip: quips[Math.floor(Math.random()*quips.length)]
@@ -291,7 +312,8 @@ $(function(){
     set_frame_height();
   });
 
-  next_frame();
+  // on initial load, look for the hash
+  next_frame(window.location.hash.replace("#", ""));
 });
 </script>
 
