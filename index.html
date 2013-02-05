@@ -267,8 +267,10 @@ $(function(){
   var frame_template = $('#frame_template').html();
 
   function next_frame(hash){
+
+
   	// if the URL contains a hash and that's passed to the function, look for that item. Otherwise, use random cursor
-  	if (hash != undefined) {
+  	if (hash != undefined && hash != '') {
   		for (var i = 1; i < text.length; i++) {
 			// on the first match of the hash, set the cursor and exit
 			if (text[i].substring(0,hash.length) == hash) {
@@ -303,10 +305,13 @@ $(function(){
 		}, 200);
 
     $('.fuck_subtitle').text(subtitles[Math.floor(Math.random()*subtitles.length)]);
+    
+	window.location.hash = anchor;
 
     cursor = (cursor >= text.length -1) ? 1 : cursor + 1;
-  }
 
+  }
+  
   $('#frames').delegate('a.quip', 'click', function(){
     next_frame();
     set_frame_height();
