@@ -92,7 +92,7 @@
 
 <script type="text/html" id="frame_template">
   <div class="frame future">
-    <div class="text" id="{{anchor}}"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb"/>{{text}}
+    <div class="text" data-id="{{anchor}}"><img src="images/illustrations/{{illustrations}}" alt="Guy With Bulb"/>{{text}}
     </div>
     <div class="footnote"><a href="{{footnote}}">{{footnote}}</a></div>
     <div class="bfd">
@@ -106,7 +106,7 @@
 <script type="text/javascript">
 $("#twitter_link").on('click',function(){
 	newlink = 'http://twitter.com/intent/tweet?url=http://bit.ly/ccets%23'
-	newlink += $('.text').attr('id')
+	newlink += $('.text').attr('data-id')
 	newlink += '&text=\"'
 	newlink += encodeURIComponent($('.text').text().trim())
 	newlink += '\" via: '
@@ -115,7 +115,7 @@ $("#twitter_link").on('click',function(){
 
 $("#facebook_link").on('click',function(){
 	newlink = 'http://www.facebook.com/sharer.php?u=http://www.explainthatshit.com%23'
-	newlink += $('.text').attr('id')
+	newlink += $('.text').attr('data-id')
 	newlink += '&t='
 	newlink += encodeURIComponent($('.text').text().trim())
 	newlink += '\" via: '
