@@ -3,7 +3,7 @@
 $(window).load(function() {
 	 set_frame_height();	 
 
-	 $("body").swipe({
+	 $("#wtf").swipe({
        swipeLeft:function(event, direction, distance, duration, fingerCount) {
          $('.bfd a.quip').trigger('click');
          var window_width = $(window).width();
