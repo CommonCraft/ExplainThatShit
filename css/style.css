@@ -336,7 +336,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */
 
 #share_this {
 	margin: 0 auto;
-	width: 300px;
+	width: 50%;
 	color: #000;
 	margin-top: 320px;
 	margin-left: 260px;
@@ -345,10 +345,9 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */
 div.fb-like  {
 	display: inline-block;
 	height: 20px;
-	float: right;
-	margin-top: -24px; /* For Idea Only */
-	margin-left: -60px;
-	margin-right: 30px;
+	margin-left: 10px;
+    
+}
 }
 
 #frames div.frame div.text img {
