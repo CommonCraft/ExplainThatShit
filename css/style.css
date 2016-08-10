@@ -336,17 +336,17 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */
 
 #share_this {
 	margin: 0 auto;
-	width: 50%;
+	width: auto;
 	color: #000;
 	margin-top: 320px;
 	margin-left: 260px;
+    text-align: center;
 }
 
 div.fb-like  {
 	display: inline-block;
 	height: 20px;
 	margin-left: 10px;
-    
 }
 }
 
@@ -400,7 +400,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
 box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
 #frames .left-corner, #frames .right-corner { display:none; } 
 
-#share_this { clear:both; margin-top:0;  margin:13px auto  0  !important;  width:235px !important;  }
+#share_this { clear:both; margin-top:0;  margin:13px auto  0  !important;  }
 
 .csstransforms3d #frames .frame { min-width:100%; }
 
