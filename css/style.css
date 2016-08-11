@@ -465,7 +465,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
     min-height: 1px !important;
     height: auto !important;
     height: auto !important;
-    margin: 0 auto 0; /* the bottom margin is the negative value of the footer's height */
+    margin: 0 auto -170; /* the bottom margin is the negative value of the footer's height */
   }
     #share {height: 160px; }
     #links { margin-left: auto; margin-right: auto; display:block; width:80%; }
@@ -491,7 +491,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
     min-height: 1px !important;
     height: auto !important;
     height:  auto !important;
-    margin: 0 auto 0; /* the bottom margin is the negative value of the footer's height */
+    margin: 0 auto -170; /* the bottom margin is the negative value of the footer's height */
   }
   .footer { position:relative; }
   #links { display:block; margin-left:auto; margin-right: auto;  }
@@ -500,10 +500,5 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
 
 }
 
-@media screen and (max-height: 720px) {
-	
-.footer, .push { height: 170px !important; }
-#share { height: 170px !important;}
 
-}
 
