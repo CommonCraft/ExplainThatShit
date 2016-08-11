@@ -449,6 +449,13 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
    #links img {width:auto; height:55px; margin-top:5px; margin-left: auto; margin-right: auto; display: block; }
    #buy_more {  float:left; display:inline-block; }
    #links span { display:block; margin-left: auto; margin-right: auto; float:left; 	width: 60%; }
+   .wrapper {
+   overflow:hidden;
+   min-height: 100%;
+   height: auto !important;
+   height: 100%;
+   margin: 0 auto -160px; /* the bottom margin is the negative value of the footer's height */
+}
 }
 
 
@@ -461,11 +468,12 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
    #copyright_box { display:none; }
    #share_this { margin-left: auto; margin-right: auto; }
   .wrapper {
-    overflow: visible;
-    min-height: 1px !important;
-    height: auto !important;
-    height: auto !important;
-    margin: 0 auto -170; /* the bottom margin is the negative value of the footer's height */
+  overflow:hidden;
+
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -160px !important; /* the bottom margin is the negative value of the footer's height */
   }
     #share {height: 160px; }
     #links { margin-left: auto; margin-right: auto; display:block; width:80%; }
@@ -491,7 +499,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
     min-height: 1px !important;
     height: auto !important;
     height:  auto !important;
-    margin: 0 auto -170; /* the bottom margin is the negative value of the footer's height */
+    margin: 0 auto -160; /* the bottom margin is the negative value of the footer's height */
   }
   .footer { position:relative; }
   #links { display:block; margin-left:auto; margin-right: auto;  }
@@ -500,5 +508,11 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
 
 }
 
+@media screen and (max-height: 720px) {
+	.footer, .push { height: 170px !important; }
+    #share { height: 170px !important;}
+    .wrapper {
+    }
 
+}
 
