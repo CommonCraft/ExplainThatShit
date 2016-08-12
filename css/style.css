@@ -270,18 +270,9 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */
   float: right;
   text-align: center;
   color: #ffffff;
-  color: #ffffff;
   margin-right: 20px;
   margin-bottom: 10px;
   margin-top: 10px;      
-}
-
-#links span {
-	display: block;
-    float:right;
-	margin-left: 20px;
-	margin-top: 20px;
-	padding-bottom: 5px;
 }
 
 #buy_more {
@@ -294,33 +285,18 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */
 	text-transform: uppercase;
     color: #5c5e5c  !important;
     margin-top: 10px;      
-
 }
 
 #links img {
-	float: left;
-    z-index: 1;
+	float: right;
 }
 
 #copyright_box {
-	display: block;
+	display: inline-block;
 	float: left;
 	text-align: left;
-	margin-top: 25px;
-}
-
-/* line 121, ../scss/style.scss */
-.clearfix {
-  zoom: 1;
-}
-
-/* line 124, ../scss/style.scss */
-.clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+	margin-top: 40px;
+    margin-left: 20px;
 }
 
 /* line 131, ../scss/style.scss */
@@ -422,40 +398,39 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
     .fuck_subtitle { font-size:35px !important;}
     #frames { margin-top: 10px; }
     #so.fuck { margin-bottom:20px;  }
-    #copyright_box { font-size:10px !important; display:block !important;}
-    #links img {width:auto; height:55px; margin-top:5px; position:center;   }
+    #copyright_box { font-size:10px !important; display: block; margin-left: 20px; }
+    #links img {width:auto; height:55px; margin-top:5px; position:center; float:none;  }
 }
 
+@media screen and (max-width: 710px){
+    #copyright_box { float:none; margin-top: 30px; }
+    
+}
 
 @media screen and (max-width: 640px) { 
    #frames div.frame div.text { text-align:left; line-height:24px;  }
    #so.fuck { margin-bottom:0px; padding-top:15px; height: 27px; }
-   #copyright_box { display:none !important;  }
-   #links span { display:block !important; }
-   #share { height: 100px; }    
-   #links { margin-top:0;  }
-   #links img {width:auto; height:55px; margin-top:5px; margin-left: auto; margin-right: auto; display: block; }
-   #buy_more { margin-left: auto; margin-right: auto; display:block; }
+   #share { height: 100px; } 
+   #footer {height:100px;}
+   .wrapper { margin: 0 auto -100px;}
    .fuck_subtitle_smaller { display: block; }
    .fuck_subtitle { display: none; }
+   #copyright_box { margin-left: auto; margin-right: auto; width:80%; text-align: center; width: 80%; display: inline-block; margin-top: auto; }
 }
 
 
 @media screen and (max-width: 540px) { 
-    #copyright_box { display:none !important;  }
-    .right-copy { display:block !important; }
-    #links { display:block; margin-left: auto; margin-right: auto; height:auto; width: 80%; }
-    #share { display:block; margin-left: auto; margin-right: auto; float:left; height:160px; } 
-   #links img {width:auto; height:55px; margin-top:5px; margin-left: auto; margin-right: auto; display: block; }
-   #buy_more {  float:left; display:inline-block; }
-   #links span { display:block; margin-left: auto; margin-right: auto; float:left; 	width: 60%; }
+   #share { display:block; margin-left: auto; margin-right: auto; float:none; height:160px; } 
+   #links { display:block; margin-left: auto; margin-right: auto; height:auto; width: 80%; float:none; }
+   #buy_more {  float:none; height: auto; display: inline-block;  }
    .wrapper {
    overflow:hidden;
    min-height: 100%;
    height: auto !important;
    height: 100%;
-   margin: 0 auto -160px; /* the bottom margin is the negative value of the footer's height */
-}
+   margin: 0 auto -160px; /* the bottom margin is the negative value of the footer's height */   }
+   .footer {height: 160px !important;}
+   #copyright_box { margin-left: auto; margin-right: auto; margin-top: 15px; width:80%; text-align: center; white-space: nowrap; display:block;  }
 }
 
 
@@ -465,7 +440,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
   .shell .text { margin-left:20px; margin-right:20px; min-height:1px !important; height:auto !important; padding-bottom:30px; } 
   #frames div.frame div.text { text-align:left; line-height:18px; font-size:15px;  }
   .bfd a { width:90%;  margin-left:5%; margin-right:5%;  font-size:17px;  }
-   #copyright_box { display:none; }
+   #copyright_box {  }
    #share_this { margin-left: auto; margin-right: auto; }
   .wrapper {
   overflow:hidden;
@@ -475,12 +450,11 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
   height: 100%;
   margin: 0 auto -160px !important; /* the bottom margin is the negative value of the footer's height */
   }
-    #share {height: 160px; }
-    #links { margin-left: auto; margin-right: auto; display:block; width:80%; }
+  #share {height: 160px; }
+  #links { margin-left: auto; margin-right: auto; display:block; width:80%; }
   #frames div.frame div.text img {  width:100px; float:right; display:none;   } 
-  #share img { margin-left:20px; margin-right:20px; display: block; }
-  #buy_more { margin-left:20px; margin-right:20px; display: block;  }
-  #links span { display:block; margin-left: auto; margin-right: auto; float:left; width: 80%; }
+  #buy_more { margin-left: auto; margin-right: auto; display: block;}
+
 }
 
 
@@ -504,7 +478,6 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
   .footer { position:relative; }
   #links { display:block; margin-left:auto; margin-right: auto;  }
   #buy_more { margin-left: auto; margin-right: auto; display: block;}
-  #share img { margin-left:20px; margin-right:20px; display: block; }
 
 }
 
