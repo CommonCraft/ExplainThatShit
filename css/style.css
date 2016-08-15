@@ -287,8 +287,8 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */
     margin-top: 10px;      
 }
 
-#links img {
-	float: right;
+#ex_logo {
+	float: left;
 }
 
 #copyright_box {
@@ -399,7 +399,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
     #frames { margin-top: 10px; }
     #so.fuck { margin-bottom:20px;  }
     #copyright_box { font-size:10px !important; display: block; margin-left: 20px; }
-    #links img {width:auto; height:55px; margin-top:5px; position:center; float:none;  }
+    #ex_logo {width:auto; height:55px; margin-top:5px; position:center; float:none;  }
 }
 
 @media screen and (max-width: 710px){
