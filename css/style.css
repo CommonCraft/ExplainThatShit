@@ -295,7 +295,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */
 	display: inline-block;
 	float: left;
 	text-align: left;
-	margin-top: 40px;
+	margin-top: 20px;
     margin-left: 20px;
 }
 
@@ -410,8 +410,8 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
 @media screen and (max-width: 640px) { 
    #frames div.frame div.text { text-align:left; line-height:24px;  }
    #so.fuck { margin-bottom:0px; padding-top:15px; height: 27px; }
-   #share { height: 100px; } 
-   #footer {height:100px;}
+   #share { height: 110px; } 
+   #footer {height:110px;}
    .wrapper { margin: 0 auto -100px;}
    .fuck_subtitle_smaller { display: block; }
    .fuck_subtitle { display: none; }
@@ -420,7 +420,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
 
 
 @media screen and (max-width: 540px) { 
-   #share { display:block; margin-left: auto; margin-right: auto; float:none; height:160px; } 
+   #share { display:block; margin-left: auto; margin-right: auto; float:none; height:180px; } 
    #links { display:block; margin-left: auto; margin-right: auto; height:auto; width: 80%; float:none; }
    #buy_more {  float:none; height: auto; display: inline-block;  }
    .wrapper {
@@ -428,8 +428,8 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
    min-height: 100%;
    height: auto !important;
    height: 100%;
-   margin: 0 auto -160px; /* the bottom margin is the negative value of the footer's height */   }
-   .footer {height: 160px !important;}
+   margin: 0 auto -180px; /* the bottom margin is the negative value of the footer's height */   }
+   .footer {height: 180px !important;}
    #copyright_box { margin-left: auto; margin-right: auto; margin-top: 15px; width:80%; text-align: center; white-space: nowrap; display:block;  }
 }
 
@@ -448,9 +448,9 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -160px !important; /* the bottom margin is the negative value of the footer's height */
+  margin: 0 auto -180px !important; /* the bottom margin is the negative value of the footer's height */
   }
-  #share {height: 160px; }
+  #share {height: 180px; }
   #links { margin-left: auto; margin-right: auto; display:block; width:80%; }
   #frames div.frame div.text img {  width:100px; float:right; display:none;   } 
   #buy_more { margin-left: auto; margin-right: auto; display: block;}
@@ -473,7 +473,7 @@ box-shadow: 3px 3px 3.96px 0 rgba(0,0,0,.17); /* drop shadow */ }
     min-height: 1px !important;
     height: auto !important;
     height:  auto !important;
-    margin: 0 auto -160; /* the bottom margin is the negative value of the footer's height */
+    margin: 0 auto -180; /* the bottom margin is the negative value of the footer's height */
   }
   .footer { position:relative; }
   #links { display:block; margin-left:auto; margin-right: auto;  }
